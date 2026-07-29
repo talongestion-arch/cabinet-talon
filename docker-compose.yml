@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: "postgresql://postgres:postgres@db:5432/cabinettalon?schema=public"
+    depends_on:
+      - db
+    volumes:
+      - ./site-web:/app/site-web
+
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: cabinettalon
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

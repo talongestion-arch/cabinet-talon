@@ -1,0 +1,34 @@
+# OS
+.DS_Store
+
+# Node
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+npm-shrinkwrap.json
+
+# Next.js
+.next
+out
+
+# Env files
+.env
+.env.*
+
+# Editor
+.vscode/
+.idea/
+
+# Docker
+docker-compose.override.yml
+
+# Logs
+*.log
+
+# Site-web build artifacts
+site-web/node_modules
+site-web/.next
+site-web/.env*

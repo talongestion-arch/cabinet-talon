@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cabinettalon.fr/sitemap.xml
