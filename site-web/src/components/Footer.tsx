@@ -1,3 +1,5 @@
+const currentYear = new Date().getFullYear();
+
 export function SiteFooter() {
   return (
     <footer className="border-t border-slate-900/20 bg-slate-950 text-slate-300">
@@ -30,7 +32,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-12 border-t border-slate-900/10 pt-6 text-sm text-slate-500">
-          © 2025 Cabinet Talon. Tous droits réservés.
+          © {currentYear} Cabinet Talon. Tous droits réservés.
         </div>
       </div>
     </footer>
